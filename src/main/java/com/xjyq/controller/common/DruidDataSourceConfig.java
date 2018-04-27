@@ -1,4 +1,4 @@
-package com.xjyq.common;
+package com.xjyq.controller.common;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.support.http.StatViewServlet;
