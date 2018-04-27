@@ -32,10 +32,10 @@ public class DruidDataSourceConfig implements EnvironmentAware {
     @Value("${spring.datasource.password}")
     private String password;
 
-    @Value("${spring.datasource.driverClassName}")
+    @Value("${spring.datasource.driver-class-name}")
     private String driverClassName;
 
-    @Value("${spring.datasource.initialSize}")
+    @Value("${spring.datasource.initial-size}")
     private int initialSize;
 
     @Value("${spring.datasource.minIdle}")
