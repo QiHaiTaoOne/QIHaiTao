@@ -1,13 +1,307 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.xjyq.mapper.UserMapper">
-  <resultMap id="ListMap" type="com.xjyq.pojo.User"></resultMap>
-
-  <resultMap id="DetailMap" type="com.xjyq.pojo.User" extends="ListMap"></resultMap>
-
-
-  <select id="selectByPrimaryKey" resultMap="ListMap">
-  SELECT *FROM iou_user WHERE id = #{id}
+  <resultMap id="BaseResultMap" type="com.xjyq.pojo.User">
+    <constructor>
+      <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="realName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="mobile" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="password" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="age" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="idNum" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="zhimaScore" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="qqNum" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="city" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="address" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="education" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="xueXin" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="hasDelete" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="createTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="updateTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="channelId" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="state" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="auditor" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="secondAuditor" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="remark" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="reportPic" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="hasRenew" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="type" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, realName, mobile, password, age, idNum, zhimaScore, qqNum, city, address, education, 
+    xueXin, hasDelete, createTime, updateTime, channelId, state, auditor, secondAuditor, 
+    remark, reportPic, hasRenew, type
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from iou_user
+    where id = #{id,jdbcType=INTEGER}
   </select>
-
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from iou_user
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.xjyq.pojo.User">
+    insert into iou_user (id, realName, mobile, 
+      password, age, idNum, 
+      zhimaScore, qqNum, city, 
+      address, education, xueXin, 
+      hasDelete, createTime, updateTime, 
+      channelId, state, auditor, 
+      secondAuditor, remark, reportPic, 
+      hasRenew, type)
+    values (#{id,jdbcType=INTEGER}, #{realname,jdbcType=VARCHAR}, #{mobile,jdbcType=VARCHAR}, 
+      #{password,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER}, #{idnum,jdbcType=VARCHAR}, 
+      #{zhimascore,jdbcType=INTEGER}, #{qqnum,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, 
+      #{address,jdbcType=VARCHAR}, #{education,jdbcType=INTEGER}, #{xuexin,jdbcType=BIT}, 
+      #{hasdelete,jdbcType=BIT}, #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}, 
+      #{channelid,jdbcType=INTEGER}, #{state,jdbcType=INTEGER}, #{auditor,jdbcType=INTEGER}, 
+      #{secondauditor,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR}, #{reportpic,jdbcType=VARCHAR}, 
+      #{hasrenew,jdbcType=BIT}, #{type,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.xjyq.pojo.User">
+    insert into iou_user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="realname != null">
+        realName,
+      </if>
+      <if test="mobile != null">
+        mobile,
+      </if>
+      <if test="password != null">
+        password,
+      </if>
+      <if test="age != null">
+        age,
+      </if>
+      <if test="idnum != null">
+        idNum,
+      </if>
+      <if test="zhimascore != null">
+        zhimaScore,
+      </if>
+      <if test="qqnum != null">
+        qqNum,
+      </if>
+      <if test="city != null">
+        city,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
+      <if test="education != null">
+        education,
+      </if>
+      <if test="xuexin != null">
+        xueXin,
+      </if>
+      <if test="hasdelete != null">
+        hasDelete,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+      <if test="updatetime != null">
+        updateTime,
+      </if>
+      <if test="channelid != null">
+        channelId,
+      </if>
+      <if test="state != null">
+        state,
+      </if>
+      <if test="auditor != null">
+        auditor,
+      </if>
+      <if test="secondauditor != null">
+        secondAuditor,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="reportpic != null">
+        reportPic,
+      </if>
+      <if test="hasrenew != null">
+        hasRenew,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="realname != null">
+        #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null">
+        #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null">
+        #{age,jdbcType=INTEGER},
+      </if>
+      <if test="idnum != null">
+        #{idnum,jdbcType=VARCHAR},
+      </if>
+      <if test="zhimascore != null">
+        #{zhimascore,jdbcType=INTEGER},
+      </if>
+      <if test="qqnum != null">
+        #{qqnum,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="education != null">
+        #{education,jdbcType=INTEGER},
+      </if>
+      <if test="xuexin != null">
+        #{xuexin,jdbcType=BIT},
+      </if>
+      <if test="hasdelete != null">
+        #{hasdelete,jdbcType=BIT},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="channelid != null">
+        #{channelid,jdbcType=INTEGER},
+      </if>
+      <if test="state != null">
+        #{state,jdbcType=INTEGER},
+      </if>
+      <if test="auditor != null">
+        #{auditor,jdbcType=INTEGER},
+      </if>
+      <if test="secondauditor != null">
+        #{secondauditor,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="reportpic != null">
+        #{reportpic,jdbcType=VARCHAR},
+      </if>
+      <if test="hasrenew != null">
+        #{hasrenew,jdbcType=BIT},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xjyq.pojo.User">
+    update iou_user
+    <set>
+      <if test="realname != null">
+        realName = #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null">
+        mobile = #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null">
+        age = #{age,jdbcType=INTEGER},
+      </if>
+      <if test="idnum != null">
+        idNum = #{idnum,jdbcType=VARCHAR},
+      </if>
+      <if test="zhimascore != null">
+        zhimaScore = #{zhimascore,jdbcType=INTEGER},
+      </if>
+      <if test="qqnum != null">
+        qqNum = #{qqnum,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        city = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="education != null">
+        education = #{education,jdbcType=INTEGER},
+      </if>
+      <if test="xuexin != null">
+        xueXin = #{xuexin,jdbcType=BIT},
+      </if>
+      <if test="hasdelete != null">
+        hasDelete = #{hasdelete,jdbcType=BIT},
+      </if>
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="channelid != null">
+        channelId = #{channelid,jdbcType=INTEGER},
+      </if>
+      <if test="state != null">
+        state = #{state,jdbcType=INTEGER},
+      </if>
+      <if test="auditor != null">
+        auditor = #{auditor,jdbcType=INTEGER},
+      </if>
+      <if test="secondauditor != null">
+        secondAuditor = #{secondauditor,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="reportpic != null">
+        reportPic = #{reportpic,jdbcType=VARCHAR},
+      </if>
+      <if test="hasrenew != null">
+        hasRenew = #{hasrenew,jdbcType=BIT},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xjyq.pojo.User">
+    update iou_user
+    set realName = #{realname,jdbcType=VARCHAR},
+      mobile = #{mobile,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      age = #{age,jdbcType=INTEGER},
+      idNum = #{idnum,jdbcType=VARCHAR},
+      zhimaScore = #{zhimascore,jdbcType=INTEGER},
+      qqNum = #{qqnum,jdbcType=VARCHAR},
+      city = #{city,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      education = #{education,jdbcType=INTEGER},
+      xueXin = #{xuexin,jdbcType=BIT},
+      hasDelete = #{hasdelete,jdbcType=BIT},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      channelId = #{channelid,jdbcType=INTEGER},
+      state = #{state,jdbcType=INTEGER},
+      auditor = #{auditor,jdbcType=INTEGER},
+      secondAuditor = #{secondauditor,jdbcType=INTEGER},
+      remark = #{remark,jdbcType=VARCHAR},
+      reportPic = #{reportpic,jdbcType=VARCHAR},
+      hasRenew = #{hasrenew,jdbcType=BIT},
+      type = #{type,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
 </mapper>
