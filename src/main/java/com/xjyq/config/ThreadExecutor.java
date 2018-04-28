@@ -1,4 +1,4 @@
-package com.xjyq.controller.common;
+package com.xjyq.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
