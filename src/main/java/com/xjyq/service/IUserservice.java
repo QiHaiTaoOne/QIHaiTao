@@ -4,5 +4,5 @@ import com.xjyq.common.JsonResponse;
 
 public interface IUserservice {
 
-    JsonResponse selectByPrimaryKey(Integer id);
+    JsonResponse selectByPrimaryKey(Integer pageSize, Integer currentPage);
 }

@@ -24,7 +24,7 @@ public class UserController {
     @RequestMapping("/find")
     public JsonResponse fid(){
         logger.info("===================打印日志=========");
-     return  JsonResponse.createBySuccess(iUserservice.selectByPrimaryKey(100048)) ;
+     return  iUserservice.selectByPrimaryKey(1, 1) ;
     }
 
 }
