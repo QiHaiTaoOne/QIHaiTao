@@ -19,6 +19,9 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Druid 数据连接池配置
+ */
 @Configuration
 @EnableTransactionManagement
 public class DruidDataSourceConfig implements EnvironmentAware {
