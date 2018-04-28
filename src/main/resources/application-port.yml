@@ -8,11 +8,11 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    username: root
-    password: Wanxiangdai2018
+    username: 123456
+    password: 123456
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://bj-cdb-98fxjfrh.sql.tencentcdb.com:63617/iou?characterEncoding=utf-8
-    DruidName: admin
+    url: jdbc:mysql:/
+    DruidName: 123456
     DruidPassword: 123456
     initial-size: 5
     minIdle: 5
