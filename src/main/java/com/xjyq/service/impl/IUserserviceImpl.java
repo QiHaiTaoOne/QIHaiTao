@@ -14,7 +14,6 @@ public class IUserserviceImpl  implements IUserservice {
     @Resource
     private UserMapper userMapper;
 
-    @Login
     @Override
     public JsonResponse selectByPrimaryKey(Integer id) {
         return JsonResponse.createBySuccess(userMapper.selectByPrimaryKey(id));

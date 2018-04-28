@@ -10,7 +10,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 
@@ -30,11 +29,8 @@ public class XjyqApplicationTests {
 
 
 	@Test
-	@Transactional
 	public void contextLoads() {
-		JsonResponse user = iUserservice.selectByPrimaryKey(100048);
-		logger.error("========logeer========"+user.getData());
-		System.out.println("=============="+user.getData().toString());
+
 
 	}
 

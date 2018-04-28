@@ -57,7 +57,6 @@ public class DruidDataSourceConfig implements EnvironmentAware {
 
     @Bean
     public DataSource dataSource() {
-        System.out.print("==============="+dbUrl);
         DruidDataSource datasource = new DruidDataSource();
         datasource.setUrl(dbUrl);
         datasource.setDriverClassName(driverClassName);

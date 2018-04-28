@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
 @EnableTransactionManagement
-@ComponentScan(basePackages ={"com.xjyq.controller.*","com.xjyq.service", "com.xjyq.Aspc"})
+@ComponentScan(basePackages ={"com.xjyq.controller","com.xjyq.service", "com.xjyq.Aspc"})
 @MapperScan(basePackages = {"com.xjyq.mapper"})
 public class XjyqApplication {
 
