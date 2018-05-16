@@ -12,6 +12,7 @@ import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
@@ -26,6 +27,8 @@ import java.util.Properties;
  */
 @Configuration
 @EnableTransactionManagement
+@PropertySource(value = "application-dev.yml", ignoreResourceNotFound = true)
+
 public class DruidDataSourceConfig implements EnvironmentAware {
 
     @Value("${spring.datasource.url}")
@@ -37,23 +40,23 @@ public class DruidDataSourceConfig implements EnvironmentAware {
     @Value("${spring.datasource.password}")
     private String password;
 
-    @Value("${spring.datasource.driver-class-name}")
+    @Value("${spring.datasource.sdriver.name}")
     private String driverClassName;
 
     @Value("${spring.datasource.initial-size}")
-    private int initialSize;
+    private String initialSize;
 
     @Value("${spring.datasource.minIdle}")
-    private int minIdle;
+    private String minIdle;
 
     @Value("${spring.datasource.maxActive}")
-    private int maxActive;
+    private String maxActive;
 
     @Value("${spring.datasource.maxWait}")
-    private int maxWait;
+    private String maxWait;
 
     @Value("${spring.datasource.minEvictableIdleTimeMillis}")
-    private int minEvictableIdleTimeMillis;
+    private String minEvictableIdleTimeMillis;
 
     @Value("${spring.datasource.DruidName}")
     private String DruidName;
@@ -75,7 +78,7 @@ public class DruidDataSourceConfig implements EnvironmentAware {
         datasource.setPassword(password);
         datasource.setInitialSize(Integer.valueOf(initialSize));
         datasource.setMinIdle(Integer.valueOf(minIdle));
-        datasource.setMaxWait(Long.valueOf(maxWait));
+        datasource.setMaxWait(Integer.valueOf(maxWait));
         datasource.setMaxActive(Integer.valueOf(maxActive));
         datasource.setMinEvictableIdleTimeMillis(
                 Long.valueOf(minEvictableIdleTimeMillis));

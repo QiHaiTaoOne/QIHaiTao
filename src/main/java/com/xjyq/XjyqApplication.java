@@ -3,7 +3,9 @@ package com.xjyq;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
@@ -14,5 +16,7 @@ public class XjyqApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(XjyqApplication.class, args);
+		System.out.print("==============================项目启动成功！=========================================");
 	}
+
 }
