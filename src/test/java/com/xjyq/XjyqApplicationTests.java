@@ -3,6 +3,7 @@ package com.xjyq;
 import com.xjyq.common.JsonResponse;
 import com.xjyq.mapper.UserMapper;
 import com.xjyq.service.IUserservice;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -14,11 +15,10 @@ import org.springframework.test.context.junit4.SpringRunner;
 import javax.annotation.Resource;
 
 @RunWith(SpringRunner.class)
-@Rollback
+@Slf4j
 @SpringBootTest
 public class XjyqApplicationTests {
 
-	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@Resource
 	private IUserservice iUserservice;
@@ -30,8 +30,10 @@ public class XjyqApplicationTests {
 
 	@Test
 	public void contextLoads() {
-
-
+        log.info("=============log.info==================");
+		log.debug("==========log.debug============");
+		log.error("======log.error============");
+		log.warn("=======log.warn==========");
 	}
 
 }

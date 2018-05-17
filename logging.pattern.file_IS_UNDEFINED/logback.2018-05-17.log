@@ -1,0 +1,219 @@
+14:51:05.526 logback [main] INFO  com.xjyq.XjyqApplication - Starting XjyqApplication on zhangshun with PID 7680 (E:\xjyq\target\classes started by Administrator in E:\xjyq)
+14:51:05.530 logback [main] INFO  com.xjyq.XjyqApplication - No active profile set, falling back to default profiles: default
+14:51:05.619 logback [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5bf8fa12: startup date [Thu May 17 14:51:05 CST 2018]; root of context hierarchy
+14:51:05.841 logback [main] INFO  o.s.c.a.ConfigurationClassParser - Properties location [application-dev.yml] not resolvable: class path resource [application-dev.yml] cannot be opened because it does not exist
+14:51:06.442 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'druidDataSourceConfig' of type [com.xjyq.config.DruidDataSourceConfig$$EnhancerBySpringCGLIB$$736e8aa7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:51:06.517 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$86bdc2dc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:51:06.912 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+14:51:06.922 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+14:51:06.930 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:51:06.930 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.29
+14:51:06.934 logback [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+14:51:06.934 logback [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+14:51:06.934 logback [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+14:51:07.964 logback [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+14:51:08.046 logback [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:51:08.046 logback [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2427 ms
+14:51:08.247 logback [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet statViewServlet mapped to [/druid/*]
+14:51:08.248 logback [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+14:51:08.251 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+14:51:08.252 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+14:51:08.252 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+14:51:08.252 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+14:51:08.252 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
+14:51:08.865 logback [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 
+14:51:08.870 logback [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService  'myExecutor'
+14:51:09.116 logback [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+14:51:09.247 logback [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5bf8fa12: startup date [Thu May 17 14:51:05 CST 2018]; root of context hierarchy
+14:51:09.320 logback [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/find]}" onto public com.xjyq.common.JsonResponse com.xjyq.controller.UserController.fid()
+14:51:09.326 logback [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+14:51:09.327 logback [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+14:51:09.401 logback [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+14:51:09.401 logback [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+14:51:09.482 logback [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+14:51:09.926 logback [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+14:51:09.927 logback [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+14:51:09.933 logback [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'connectionFactory' has been autodetected for JMX exposure
+14:51:09.936 logback [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located managed bean 'connectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=connectionFactory,type=CachingConnectionFactory]
+14:51:09.958 logback [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+14:51:09.963 logback [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+14:51:09.970 logback [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+14:51:09.975 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+14:51:09.984 logback [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+14:51:09.999 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path ''
+14:51:10.008 logback [pool-5-thread-1] INFO  com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:51:10.008 logback [pool-5-thread-1] ERROR com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:51:10.008 logback [pool-5-thread-1] WARN  com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:51:10.007 logback [main] INFO  com.xjyq.XjyqApplication - Started XjyqApplication in 5.089 seconds (JVM running for 5.965)
+14:51:10.013 logback [main] INFO  com.xjyq.XjyqApplication - =======================项目启动成功！=============================
+14:51:15.001 logback [pool-5-thread-1] INFO  com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:51:15.001 logback [pool-5-thread-1] ERROR com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:51:15.001 logback [pool-5-thread-1] WARN  com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:51:20.001 logback [pool-5-thread-1] INFO  com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:51:20.002 logback [pool-5-thread-1] ERROR com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:51:20.002 logback [pool-5-thread-1] WARN  com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:51:25.001 logback [pool-5-thread-1] INFO  com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:51:25.001 logback [pool-5-thread-1] ERROR com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:51:25.001 logback [pool-5-thread-1] WARN  com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:51:30.001 logback [pool-5-thread-1] INFO  com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:51:30.001 logback [pool-5-thread-1] ERROR com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:51:30.001 logback [pool-5-thread-1] WARN  com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:51:35.001 logback [pool-5-thread-1] INFO  com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:51:35.001 logback [pool-5-thread-1] ERROR com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:51:35.001 logback [pool-5-thread-1] WARN  com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:51:40.001 logback [pool-5-thread-1] INFO  com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:51:40.003 logback [pool-5-thread-1] ERROR com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:51:40.003 logback [pool-5-thread-1] WARN  com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:51:45.001 logback [pool-5-thread-1] INFO  com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:51:45.001 logback [pool-5-thread-1] ERROR com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:51:45.001 logback [pool-5-thread-1] WARN  com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:51:50.001 logback [pool-5-thread-1] INFO  com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:51:50.001 logback [pool-5-thread-1] ERROR com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:51:50.001 logback [pool-5-thread-1] WARN  com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:51:55.010 logback [pool-5-thread-1] INFO  com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:51:55.011 logback [pool-5-thread-1] ERROR com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:51:55.011 logback [pool-5-thread-1] WARN  com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:52:00.003 logback [pool-5-thread-1] INFO  com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:52:00.004 logback [pool-5-thread-1] ERROR com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:52:00.004 logback [pool-5-thread-1] WARN  com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:52:05.001 logback [pool-5-thread-1] INFO  com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:52:05.001 logback [pool-5-thread-1] ERROR com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:52:05.001 logback [pool-5-thread-1] WARN  com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:52:10.001 logback [pool-5-thread-1] INFO  com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:52:10.001 logback [pool-5-thread-1] ERROR com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:52:10.001 logback [pool-5-thread-1] WARN  com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:52:15.001 logback [pool-5-thread-1] INFO  com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:52:15.001 logback [pool-5-thread-1] ERROR com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:52:15.001 logback [pool-5-thread-1] WARN  com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:52:20.001 logback [pool-5-thread-1] INFO  com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:52:20.001 logback [pool-5-thread-1] ERROR com.xjyq.task.TestTask - ============Task 任务测试=======================
+14:52:20.001 logback [pool-5-thread-1] WARN  com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:14:47.042 logback [main] INFO  com.xjyq.XjyqApplication - Starting XjyqApplication on zhangshun with PID 5848 (E:\xjyq\target\classes started by Administrator in E:\xjyq)
+15:14:47.047 logback [main] INFO  com.xjyq.XjyqApplication - No active profile set, falling back to default profiles: default
+15:14:47.218 logback [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2a76840c: startup date [Thu May 17 15:14:47 CST 2018]; root of context hierarchy
+15:14:47.424 logback [main] INFO  o.s.c.a.ConfigurationClassParser - Properties location [application-dev.yml] not resolvable: class path resource [application-dev.yml] cannot be opened because it does not exist
+15:14:48.084 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'druidDataSourceConfig' of type [com.xjyq.config.DruidDataSourceConfig$$EnhancerBySpringCGLIB$$c6db4790] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:14:48.158 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$da2a7fc5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:14:48.530 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+15:14:48.540 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+15:14:48.549 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:14:48.549 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.29
+15:14:48.553 logback [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+15:14:48.553 logback [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+15:14:48.553 logback [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+15:14:49.587 logback [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+15:14:49.663 logback [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:14:49.663 logback [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2445 ms
+15:14:49.865 logback [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet statViewServlet mapped to [/druid/*]
+15:14:49.866 logback [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+15:14:49.869 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+15:14:49.869 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+15:14:49.869 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+15:14:49.869 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+15:14:49.869 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
+15:14:50.459 logback [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 
+15:14:50.465 logback [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService  'myExecutor'
+15:14:50.702 logback [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:14:50.834 logback [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2a76840c: startup date [Thu May 17 15:14:47 CST 2018]; root of context hierarchy
+15:14:50.906 logback [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/find]}" onto public com.xjyq.common.JsonResponse com.xjyq.controller.UserController.fid()
+15:14:50.910 logback [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+15:14:50.911 logback [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+15:14:50.983 logback [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:14:50.983 logback [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:14:51.048 logback [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+15:14:51.513 logback [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+15:14:51.514 logback [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+15:14:51.520 logback [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'connectionFactory' has been autodetected for JMX exposure
+15:14:51.524 logback [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located managed bean 'connectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=connectionFactory,type=CachingConnectionFactory]
+15:14:51.539 logback [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+15:14:51.544 logback [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+15:14:51.551 logback [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+15:14:51.557 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+15:14:51.565 logback [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+15:14:51.580 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path ''
+15:14:51.584 logback [main] INFO  com.xjyq.XjyqApplication - Started XjyqApplication in 5.073 seconds (JVM running for 5.878)
+15:14:51.587 logback [main] INFO  com.xjyq.XjyqApplication - =======================项目启动成功！=============================
+15:14:55.001 logback [pool-5-thread-1] INFO  com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:14:55.002 logback [pool-5-thread-1] ERROR com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:14:55.002 logback [pool-5-thread-1] WARN  com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:00.002 logback [pool-5-thread-1] INFO  com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:00.002 logback [pool-5-thread-1] ERROR com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:00.002 logback [pool-5-thread-1] WARN  com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:05.001 logback [pool-5-thread-1] INFO  com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:05.001 logback [pool-5-thread-1] ERROR com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:05.001 logback [pool-5-thread-1] WARN  com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:10.001 logback [pool-5-thread-1] INFO  com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:10.001 logback [pool-5-thread-1] ERROR com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:10.001 logback [pool-5-thread-1] WARN  com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:15.001 logback [pool-5-thread-1] INFO  com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:15.001 logback [pool-5-thread-1] ERROR com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:15.001 logback [pool-5-thread-1] WARN  com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:20.001 logback [pool-5-thread-1] INFO  com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:20.001 logback [pool-5-thread-1] ERROR com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:20.001 logback [pool-5-thread-1] WARN  com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:25.001 logback [pool-5-thread-1] INFO  com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:25.001 logback [pool-5-thread-1] ERROR com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:25.001 logback [pool-5-thread-1] WARN  com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:29.524 logback [main] INFO  com.xjyq.XjyqApplication - Starting XjyqApplication on zhangshun with PID 6068 (E:\xjyq\target\classes started by Administrator in E:\xjyq)
+15:15:29.529 logback [main] INFO  com.xjyq.XjyqApplication - No active profile set, falling back to default profiles: default
+15:15:29.596 logback [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1d3ac898: startup date [Thu May 17 15:15:29 CST 2018]; root of context hierarchy
+15:15:29.805 logback [main] INFO  o.s.c.a.ConfigurationClassParser - Properties location [application-dev.yml] not resolvable: class path resource [application-dev.yml] cannot be opened because it does not exist
+15:15:30.441 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'druidDataSourceConfig' of type [com.xjyq.config.DruidDataSourceConfig$$EnhancerBySpringCGLIB$$6e680120] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:15:30.508 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$81b73955] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:15:30.936 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+15:15:30.946 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+15:15:30.954 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:15:30.954 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.29
+15:15:30.958 logback [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+15:15:30.958 logback [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+15:15:30.958 logback [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+15:15:31.987 logback [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+15:15:32.062 logback [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:15:32.062 logback [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2466 ms
+15:15:32.240 logback [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet statViewServlet mapped to [/druid/*]
+15:15:32.241 logback [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+15:15:32.245 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+15:15:32.245 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+15:15:32.245 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+15:15:32.245 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+15:15:32.245 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
+15:15:32.855 logback [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 
+15:15:32.861 logback [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService  'myExecutor'
+15:15:33.112 logback [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:15:33.248 logback [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1d3ac898: startup date [Thu May 17 15:15:29 CST 2018]; root of context hierarchy
+15:15:33.317 logback [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/find]}" onto public com.xjyq.common.JsonResponse com.xjyq.controller.UserController.fid()
+15:15:33.322 logback [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+15:15:33.323 logback [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+15:15:33.397 logback [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:15:33.397 logback [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:15:33.465 logback [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+15:15:33.926 logback [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+15:15:33.928 logback [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+15:15:33.934 logback [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'connectionFactory' has been autodetected for JMX exposure
+15:15:33.937 logback [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located managed bean 'connectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=connectionFactory,type=CachingConnectionFactory]
+15:15:33.955 logback [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+15:15:33.960 logback [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+15:15:33.966 logback [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+15:15:33.972 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+15:15:33.980 logback [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+15:15:33.997 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path ''
+15:15:34.000 logback [main] INFO  com.xjyq.XjyqApplication - Started XjyqApplication in 5.12 seconds (JVM running for 5.947)
+15:15:34.004 logback [main] INFO  com.xjyq.XjyqApplication - =======================项目启动成功！=============================
+15:15:35.001 logback [pool-5-thread-1] INFO  com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:35.002 logback [pool-5-thread-1] ERROR com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:35.002 logback [pool-5-thread-1] WARN  com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:40.001 logback [pool-5-thread-1] INFO  com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:40.001 logback [pool-5-thread-1] ERROR com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:40.001 logback [pool-5-thread-1] WARN  com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:45.001 logback [pool-5-thread-1] INFO  com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:45.001 logback [pool-5-thread-1] ERROR com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:45.001 logback [pool-5-thread-1] WARN  com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:50.001 logback [pool-5-thread-1] INFO  com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:50.001 logback [pool-5-thread-1] ERROR com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:50.001 logback [pool-5-thread-1] WARN  com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:55.001 logback [pool-5-thread-1] INFO  com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:55.002 logback [pool-5-thread-1] ERROR com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:15:55.002 logback [pool-5-thread-1] WARN  com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:16:00.001 logback [pool-5-thread-1] INFO  com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:16:00.001 logback [pool-5-thread-1] ERROR com.xjyq.task.TestTask - ============Task 任务测试=======================
+15:16:00.001 logback [pool-5-thread-1] WARN  com.xjyq.task.TestTask - ============Task 任务测试=======================
