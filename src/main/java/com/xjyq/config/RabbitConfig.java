@@ -51,7 +51,6 @@ public class RabbitConfig {
 
     /**
      * 配置消息队列
-     * 针对消费者配置
      * @return
      */
     @Bean
