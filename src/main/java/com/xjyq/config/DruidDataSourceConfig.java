@@ -27,8 +27,6 @@ import java.util.Properties;
  */
 @Configuration
 @EnableTransactionManagement
-@PropertySource(value = "application-dev.yml", ignoreResourceNotFound = true)
-
 public class DruidDataSourceConfig implements EnvironmentAware {
 
     @Value("${spring.datasource.url}")

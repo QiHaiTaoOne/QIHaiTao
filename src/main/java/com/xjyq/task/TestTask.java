@@ -12,14 +12,9 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class TestTask {
 
-    @Scheduled(cron = "0/5 * * * * ?")
+    @Scheduled(cron = "0 0 0 * * ?")
     public void  get(){
-        log.info("============Task 任务测试=======================");
-        log.error("============Task 任务测试=======================");
 
-        log.warn("============Task 任务测试=======================");
-
-        log.trace("============Task 任务测试=======================");
 
     }
 }

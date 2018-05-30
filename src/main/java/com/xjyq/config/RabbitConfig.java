@@ -1,59 +1,67 @@
 package com.xjyq.config;
 
-import com.rabbitmq.client.Channel;
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.ChannelAwareMessageListener;
-import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
 
 
 @Configuration
 public class RabbitConfig {
 
-//    @Value("${spring.rabbitmq.url}")
-//    private String mqUrl;
-//
-//    @Value("${spring.rabbitmq.username}")
-//    private String username;
-//
-//    @Value("${spring.rabbitmq.password}")
-//    private String password;
+    @Value("${spring.rabbitmq.host}")
+    private String url;
 
-    public static final String EXCHANGE   = "spring-boot-exchange";
-    public static final String ROUTINGKEY = "spring-boot-routingKey";
+    @Value("${spring.rabbitmq.port}")
+    private Integer port;
 
+    @Value("${spring.rabbitmq.username}")
+    private String username;
+
+    @Value("${spring.rabbitmq.password}")
+    private String password;
+
+    @Value("${spring.rabbitmq.virtual-host}")
+    private String host;
+
+    /** 消息交换机的名字*/
+    public static final String EXCHANGE = "my-mq-exchange";
+    /** 队列key*/
+    public static final String ROUTINGKEY = "queue_one_key";
+
+
+    /**
+     * 配置链接信息
+     * @return
+     */
     @Bean
     public ConnectionFactory connectionFactory() {
-        CachingConnectionFactory connectionFactory = new CachingConnectionFactory();
-        connectionFactory.setAddresses("192.168.1.88:15672");
-        connectionFactory.setUsername("admin");
-        connectionFactory.setPassword("123456");
-        connectionFactory.setVirtualHost("/");
-        connectionFactory.setPublisherConfirms(true); //必须要设置
+        CachingConnectionFactory connectionFactory = new CachingConnectionFactory(url,port);
+
+        connectionFactory.setUsername(username);
+        connectionFactory.setPassword(password);
+        connectionFactory.setVirtualHost(host);
+        connectionFactory.setPublisherConfirms(true); // 必须要设置
         return connectionFactory;
     }
 
+    /**
+     * 配置消息队列
+     * 针对消费者配置
+     * @return
+     */
     @Bean
-    @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-    //必须是prototype类型
-    public RabbitTemplate rabbitTemplate() {
-        RabbitTemplate template = new RabbitTemplate(connectionFactory());
-        return template;
+    public Queue directQueue() {
+        return new Queue(ROUTINGKEY);
     }
 
     /**
+     * 配置消息交换机
      * 针对消费者配置
-     * 1. 设置交换机类型
-     * 2. 将队列绑定到交换机
-     *
-     *
      FanoutExchange: 将消息分发到所有的绑定队列，无routingkey的概念
      HeadersExchange ：通过添加属性key-value匹配
      DirectExchange:按照routingkey分发到指定队列
@@ -61,37 +69,13 @@ public class RabbitConfig {
      */
     @Bean
     public DirectExchange defaultExchange() {
-        return new DirectExchange(EXCHANGE);
+        return new DirectExchange(EXCHANGE, true, false);
     }
 
+
+    //绑定一个key ROUTINGKEY，当消息匹配到就会放到这个队列中
     @Bean
-    public Queue queue() {
-        return new Queue("spring-boot-queue", true); //队列持久
-
+    Binding bindingExchangeDirectQueue(Queue directQueue, DirectExchange directExchange) {
+        return BindingBuilder.bind(directQueue).to(directExchange).with(ROUTINGKEY);
     }
-
-    @Bean
-    public Binding binding() {
-        return BindingBuilder.bind(queue()).to(defaultExchange()).with(RabbitConfig.ROUTINGKEY);
-    }
-
-//    @Bean
-//    public SimpleMessageListenerContainer messageContainer() {
-//        SimpleMessageListenerContainer container = new SimpleMessageListenerContainer(connectionFactory());
-//        container.setQueues(queue());
-//        container.setExposeListenerChannel(true);
-//        container.setMaxConcurrentConsumers(1);
-//        container.setConcurrentConsumers(1);
-//        container.setAcknowledgeMode(AcknowledgeMode.MANUAL); //设置确认模式手工确认
-//        container.setMessageListener(new ChannelAwareMessageListener() {
-//
-//            @Override
-//            public void onMessage(Message message, Channel channel) throws Exception {
-//                byte[] body = message.getBody();
-//                System.out.println("receive msg : " + new String(body));
-//                channel.basicAck(message.getMessageProperties().getDeliveryTag(), false); //确认消息成功消费
-//            }
-//        });
-//        return container;
-//    }
 }
